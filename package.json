@@ -9,10 +9,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "predeploy:haus": "npm run build",
-    "predeploy:strato:staging": "npm run build",
-    "deploy:haus": "rsync -r dist/* koriwi@dashboard.haus:~/docker_apps/nginx-reverse/cgosewisch_html/ && ssh koriwi@dashboard.haus \"cd docker_apps/nginx-reverse/ && docker-compose restart\"",
-    "deploy:strato:staging": "sftp sftp_kilian@cgosewisch.de@ssh.strato.de <<< 'put -r dist/ /'"
+    "deploy": "./deploy.sh"
   },
   "author": "",
   "license": "ISC",
