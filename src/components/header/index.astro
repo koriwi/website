@@ -1,12 +1,13 @@
 ---
 import HeaderMenu, { Props as MenuProps } from "./menu/index.astro";
-import MobileMenu from "./mobile-menu/index.astro";
 export interface Props {
   menu: MenuProps;
 }
 const { menu } = Astro.props;
 ---
 
-<div class="flex justify-center">
+<div
+  class="flex justify-center pt-8 md:pt-24 pb-16 -mb-16 md:mb-0 bg-gradient-to-b from-[#070707]"
+>
   <HeaderMenu {...menu} />
 </div>

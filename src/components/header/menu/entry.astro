@@ -7,7 +7,7 @@ const { link, title } = Astro.props;
 ---
 
 <a
-  class="cursor-pointer flex-column items-center group text-base font-light hover:font-normal tracking-widest relative"
+  class="cursor-pointer flex-column items-center group text-base [text-shadow:_0px_0px_1px_rgb(255_255_255_/_60%)] hover:[text-shadow:_0px_0px_3px_rgb(255_255_255_/_90%)] tracking-widest relative"
   href={link}
 >
   <div class="duration-500 px-6 pt-2 pb-1 lowercase group-hover:opacity-0">
@@ -22,7 +22,7 @@ const { link, title } = Astro.props;
     class="duration-500 px-2 group-hover:px-0 opacity-0 group-hover:opacity-100"
   >
     <div
-      class="duration-200 pb-3 -mt-1 border-y-2 lg:border-t-0 border-transparent group-hover:border-white group-hover:border-opacity-70 group-hover:bg-gradient-to-t from-gray-600 group-hover:text-black"
+      class="duration-200 pb-3 -mt-1 md:border-b-2 border-t-0 border-transparent group-hover:border-white group-hover:border-opacity-70 group-hover:bg-gradient-to-t from-gray-600 group-hover:text-black"
     >
     </div>
   </div>
