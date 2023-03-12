@@ -1,0 +1,15 @@
+---
+import Entry from "./entry.astro";
+export interface Entry {
+  link: string;
+  title: string;
+}
+export interface Props {
+  links: Entry[];
+}
+const { links } = Astro.props;
+---
+
+<div class="flex w-[640px] justify-between gap-x-8">
+  {links.map((link) => <Entry {...link} />)}
+</div>

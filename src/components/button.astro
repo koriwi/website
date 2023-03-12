@@ -1,0 +1,14 @@
+---
+export interface Props {
+  children: any;
+  href?: string;
+  newTab?: boolean;
+}
+const { href, newTab, children } = Astro.props;
+---
+
+<div
+  class="cursor-pointer select-none rounded-full bg-primary hover:bg-red-700 duration-200 px-6 py-3 text-white font-bold"
+>
+  <a href={href} target={newTab ? "_blank" : "_self"}><slot /></a>
+</div>

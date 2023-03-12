@@ -1,0 +1,11 @@
+---
+export interface Props {
+  target: string;
+}
+const { target } = Astro.props;
+---
+
+<a
+  class="text-gray-600 p-5 lg:p-8 font-extralight text-lg duration-200 hover:text-primary"
+  href={target}><slot /></a
+>

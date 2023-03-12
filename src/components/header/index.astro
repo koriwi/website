@@ -1,0 +1,12 @@
+---
+import HeaderMenu, { Props as MenuProps } from "./menu/index.astro";
+import MobileMenu from "./mobile-menu/index.astro";
+export interface Props {
+  menu: MenuProps;
+}
+const { menu } = Astro.props;
+---
+
+<div class="flex justify-center">
+  <HeaderMenu {...menu} />
+</div>
