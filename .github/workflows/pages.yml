@@ -13,6 +13,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  BUILD_PATH: "."
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -30,4 +33,27 @@ jobs:
         with:
           node-version: 18
       - run: npm i
-      - run: npm run build
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+      - name: Build with Astro
+        run: |
+          npx --no-install astro build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
+        working-directory: ${{ env.BUILD_PATH }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ${{ env.BUILD_PATH }}/dist
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
