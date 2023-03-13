@@ -1,16 +1,14 @@
 ---
 import Layout from "../layouts/default.astro";
+import ReactIcon from "../../public/assets/reactjs_icon.png";
+import RustIcon from "../../public/assets/rust_icon.png";
+import TypeScriptIcon from "../../public/assets/typescript_icon.png";
+import NodeJSIcon from "../../public/assets/nodejs_icon.png";
 ---
 
 <Layout title="Kilian Gosewisch" seoDesc="Who is Kilian Gosewisch?">
-  <div
-    class="font-[MajorMono] flex flex-col items-start md:items-center lowercase gap-4 text-gray-300"
-  >
-    <div
-      class="font-bold text-4xl sm:text-5xl md:text-6xl [text-shadow:_0px_0px_10px_rgb(255_255_255_/_60%)] md:text-center"
-    >
-      Kilian Gosewisch
-    </div>
-    <div class="text-justify">Engineering code with passion</div>
-  </div>
+  <img src={TypeScriptIcon} />
+  <img src={NodeJSIcon} />
+  <img src={ReactIcon} />
+  <img src={RustIcon} />
 </Layout>
