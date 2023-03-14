@@ -21,7 +21,7 @@
     @apply font-mono;
     /* background-color: #111111; */
     @apply bg-primary;
-    @apply text-white text-opacity-50 text-xl drop-shadow-glowS;
+    @apply text-white text-opacity-70 text-xl drop-shadow-glowS;
   }
   body {
     @apply bg-primary;

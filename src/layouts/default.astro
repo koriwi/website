@@ -20,7 +20,9 @@ const { title, subTitle, imageURL, seoDesc } = Astro.props;
     <meta name="description" content={seoDesc} />
     <title>Kilian Gosewisch</title>
   </head>
-  <body class="relative pt-32 h-full">
+  <body
+    class="relative pt-20 sm:pt-32 h-full flex justify-center overflow-scroll"
+  >
     <Header
       menu={{
         links: [
@@ -31,7 +33,7 @@ const { title, subTitle, imageURL, seoDesc } = Astro.props;
       }}
     />
     <div
-      class="flex flex-col items-center justify-center min-h-full lg:max-w-5xl gap-16 lg:gap-32 py-16 px-8 md:px-4 overflow-hidden"
+      class="flex flex-col mt-auto mb-auto align-middle justify-center min-h-full lg:max-w-5xl gap-16 lg:gap-32 py-16 px-8 md:px-4"
     >
       <slot />
     </div>
