@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       mono: ["MajorMono", "monospace"],
+      sans: ["Nunito", "sans-serif"],
     },
     extend: {
       screens: {
