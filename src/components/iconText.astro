@@ -6,10 +6,10 @@ export interface Props {
 const { icon, flip } = Astro.props;
 ---
 
-<div class="max-w-lg group font-sans text-justify leading-6">
+<div class="group font-sans text-justify leading-6">
   <Icon
     name={icon}
     class={`group-odd:float-left group-odd:mr-6 group-even:float-right group-even:ml-6 mb-1 w-20 fill-white stroke-white drop-shadow-glowM`}
   />
-  <slot />
+  <p><slot /></p>
 </div>

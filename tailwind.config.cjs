@@ -15,12 +15,12 @@ module.exports = {
       },
       colors: {
         primary: "#161616",
+        dark: "#101010",
       },
       dropShadow: {
-        glowS: "0px 0px 1px rgb(255 255 255 / 60%)",
-        glowM: "0px 0px 3px rgb(255 255 255 / 90%)",
-        glowL: "0px 0px 10px rgb(255 255 255 / 60%)",
-        glowXL: "0px 0px 10px rgb(255 255 255 / 90%)",
+        glowS: "0px 0px 1px rgb(255 255 255 / 70%)",
+        glowM: "0px 0px 3px rgb(255 255 255 / 70%)",
+        glowL: "0px 0px 7px rgb(255 255 255 / 70%)",
       },
     },
   },

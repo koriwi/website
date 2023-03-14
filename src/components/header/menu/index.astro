@@ -10,6 +10,8 @@ export interface Props {
 const { links } = Astro.props;
 ---
 
-<div class="flex flex-row max-w-[640px] w-full justify-between px-4 xs:px-8">
+<div
+  class="flex flex-row max-w-[640px] w-full justify-between px-4 xs:px-8 font-mono text-xs sm:text-base"
+>
   {links.map((link) => <Entry {...link} />)}
 </div>

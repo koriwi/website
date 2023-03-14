@@ -7,27 +7,25 @@ export interface Props {
 const { link, title } = Astro.props;
 ---
 
-<a class="cursor-pointer flex-column items-center group text-base" href={link}>
+<a
+  class="cursor-pointer flex-column items-center group no-underline"
+  href={link}
+>
   <div
-    class="duration-500 transition-all tracking-tighter xs:tracking-normal pb-1 relative"
+    class="duration-500 transition-all tracking-tighter sm:tracking-normal p-1 relative"
   >
     <div
-      class="duration-500 group-hover:opacity-0 lowercase sm:px-2 drop-shadow-glowS"
-    >
-      <Title>{title}</Title>
-    </div>
-    <div
-      class="flex text-white justify-center duration-500 opacity-0 group-hover:opacity-100 top-0 left-0 absolute w-full h-full drop-shadow-glowM"
+      class="duration-500 group-hover:drop-shadow-glowM group-hover:text-white lowercase"
     >
       <Title>{title}</Title>
     </div>
   </div>
 
   <div
-    class="hidden sm:block duration-500 group-hover:px-0 opacity-0 group-hover:opacity-100"
+    class="hidden sm:block duration-500 px-4 group-hover:px-0 opacity-0 group-hover:opacity-100"
   >
     <div
-      class="transition-all duration-200 pb-3 -mt-1 xs:border-b-2 border-t-0 border-transparent group-hover:border-white group-hover:border-opacity-70 bg-gradient-to-t group-hover:from-gray-600 group-hover:text-black"
+      class="transition-all duration-200 pt-2 xs:border-b-2 border-t-0 border-transparent group-hover:border-white group-hover:border-opacity-70 bg-gradient-to-t group-hover:from-zinc-700 group-hover:text-black"
     >
     </div>
   </div>
