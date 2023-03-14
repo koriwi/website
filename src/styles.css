@@ -1,0 +1,48 @@
+@config "../tailwind.config.cjs";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nunito";
+  font-display: swap;
+  src: url("/fonts/nunito.ttf") format("truetype");
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "MajorMono";
+  font-display: swap;
+  src: url("/fonts/majormono.ttf") format("truetype");
+  font-weight: 100 900;
+}
+
+@layer base {
+  html {
+    @apply font-mono;
+    /* background-color: #111111; */
+    @apply bg-primary;
+    @apply text-white text-opacity-50 text-xl drop-shadow-glowS;
+  }
+  body {
+    @apply bg-primary;
+  }
+
+  code {
+    font-family: monospace;
+  }
+}
+
+@layer utilities {
+  .glow-min {
+    text-shadow: 0px 0px 1px rgb(255 255 255 / 60%);
+  }
+  .glow-med {
+    text-shadow: 0px 0px 3px rgb(255 255 255 / 90%);
+  }
+  .glow-heavy {
+    text-shadow: 0px 0px 10px rgb(255 255 255 / 60%);
+  }
+  .glow-max {
+    text-shadow: 0px 0px 10px rgb(255 255 255 / 90%);
+  }
+}

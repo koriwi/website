@@ -1,6 +1,6 @@
 ---
 import Header from "../components/header/index.astro";
-import TopFade from "../components/top-fade.astro";
+import "../styles.css";
 export interface Props {
   title: string;
   seoDesc: string;
@@ -15,11 +15,12 @@ const { title, subTitle, imageURL, seoDesc } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.png" />
+    <!-- <link rel="stylesheet" href="/styles.css" /> -->
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={seoDesc} />
     <title>Kilian Gosewisch</title>
   </head>
-  <body class="relative pb-16 lg:pb-0 h-full">
+  <body class="relative pt-32 h-full">
     <Header
       menu={{
         links: [
@@ -29,34 +30,10 @@ const { title, subTitle, imageURL, seoDesc } = Astro.props;
         ],
       }}
     />
-    <div class="flex justify-center py-16 px-4 md:px-8">
-      <div class="flex flex-col lg:max-w-5xl gap-16 lg:gap-32 overflow-hidden">
-        <slot />
-      </div>
+    <div
+      class="flex flex-col items-center justify-center min-h-full lg:max-w-5xl gap-16 lg:gap-32 py-16 px-8 md:px-4 overflow-hidden"
+    >
+      <slot />
     </div>
-    <style is:global>
-      html {
-        font-family: "MajorMono", sans-serif;
-        /* background-color: #111111; */
-        background-color: #161616;
-        @apply text-white text-opacity-50 text-xl;
-      }
-      @font-face {
-        font-family: "Nunito";
-        font-display: swap;
-        src: url("/fonts/nunito.ttf") format("truetype");
-        font-weight: 100 900;
-      }
-      @font-face {
-        font-family: "MajorMono";
-        font-display: swap;
-        src: url("/fonts/majormono.ttf") format("truetype");
-        font-weight: 100 900;
-      }
-      code {
-        font-family: MajorMono, Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-    </style>
   </body>
 </html>

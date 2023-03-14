@@ -1,4 +1,5 @@
 ---
+import Title from "./title.astro";
 export interface Props {
   link: string;
   title: string;
@@ -6,24 +7,29 @@ export interface Props {
 const { link, title } = Astro.props;
 ---
 
-<a
-  class="cursor-pointer flex-column items-center group text-base [text-shadow:_0px_0px_1px_rgb(255_255_255_/_60%)] hover:[text-shadow:_0px_0px_3px_rgb(255_255_255_/_90%)] md:tracking-widest relative"
-  href={link}
->
-  <div class="duration-500 md:px-6 pt-2 pb-1 lowercase group-hover:opacity-0">
-    {title}
-  </div>
+<a class="cursor-pointer flex-column items-center group text-base" href={link}>
   <div
-    class="duration-500 md:px-6 pt-2 pb-1 text-white absolute opacity-0 group-hover:opacity-100 top-0 left-0"
+    class="duration-500 transition-all tracking-tighter xs:tracking-normal pb-1 drop-shadow-glowS text-white relative"
   >
-    {title}
+    <div class="duration-500 group-hover:opacity-0 lowercase">
+      <Title>{title}</Title>
+    </div>
+    <div
+      class="flex justify-center duration-500 opacity-0 group-hover:opacity-100 top-0 left-0 absolute w-full h-full"
+    >
+      <Title>{title}</Title>
+    </div>
   </div>
+
   <div
-    class="duration-500 md:px-2 group-hover:px-0 opacity-0 group-hover:opacity-100"
+    class="hidden sm:block duration-500 px-2 group-hover:px-0 opacity-0 group-hover:opacity-100"
   >
     <div
-      class="duration-200 pb-3 -mt-1 md:border-b-2 border-t-0 border-transparent group-hover:border-white group-hover:border-opacity-70 group-hover:bg-gradient-to-t from-gray-600 group-hover:text-black"
+      class="transition-all duration-200 pb-3 -mt-1 xs:border-b-2 border-t-0 border-transparent group-hover:border-white group-hover:border-opacity-70 bg-gradient-to-t group-hover:from-gray-600 group-hover:text-black"
     >
     </div>
   </div>
 </a>
+<span
+  class="border-r-[1px] border-opacity-50 border-white sm:hidden last:hidden"
+></span>
