@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon";
+export interface Props {
+  icon: string;
+}
+const { icon, flip } = Astro.props;
+---
+
+<div class="lowercase max-w-lg text-justify group">
+  <Icon
+    name={icon}
+    class={`group-odd:float-left group-odd:mr-6 group-even:float-right group-even:ml-6  w-20 fill-white stroke-white drop-shadow-glowM`}
+  />
+  <slot />
+</div>

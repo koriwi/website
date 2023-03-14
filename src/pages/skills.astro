@@ -1,14 +1,27 @@
 ---
+import { Icon } from "astro-icon";
+import IconText from "../components/iconText.astro";
 import Layout from "../layouts/default.astro";
-import ReactIcon from "../../public/assets/reactjs_icon.png";
-import RustIcon from "../../public/assets/rust_icon.png";
-import TypeScriptIcon from "../../public/assets/typescript_icon.png";
-import NodeJSIcon from "../../public/assets/nodejs_icon.png";
 ---
 
 <Layout title="Kilian Gosewisch" seoDesc="Who is Kilian Gosewisch?">
-  <img width="150px" src={TypeScriptIcon} />
-  <img width="150px" src={NodeJSIcon} />
-  <img width="150px" src={ReactIcon} />
-  <img width="150px" src={RustIcon} />
+  <IconText icon="typescript">
+    TypeScript is awesome. I love it. I use it for everything that fits. The
+    tooling, the ecosystem, the community and the philosophy is what I like the
+    most.
+  </IconText>
+  <IconText icon="nodejs">
+    The good old nodejs. It has it's flaws and quirks, but it's still the best
+    right now IMHO. It's stable, fast and has a great ecosystem. If you know how
+    to use it, it's a great tool to get things done on the web.
+  </IconText>
+  <IconText icon="react">
+    My go-to frontend libary. I just like that it is not a framework which makes
+    it very flexible. The community and the tooling around are also a big plus.
+    I could gather some experienc around Vue and Svelte and am currently
+    checking out solid.js to find a successor to react. For static page
+    generation I really like astro. Static pages are still cool ;) Next.js is
+    also my preferred extension to react in many cases.
+  </IconText>
+  <!--<Icon name="rust" class="fill-white drop-shadow-glowM" /> -->
 </Layout>
